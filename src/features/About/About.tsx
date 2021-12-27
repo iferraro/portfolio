@@ -2,7 +2,7 @@ const about = {
   statement: [
     "General Assembly Software Engineering Immersive graduate (2021)",
     "Olympic College graduate (2021)",
-    "Energized by results",
+    "Energized by successes, both big and small",
     "Ready to use my skillset to build and iterate upon web applications, especially on the front-end",
   ],
   hobbies: [
