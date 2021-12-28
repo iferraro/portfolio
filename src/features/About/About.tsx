@@ -1,19 +1,25 @@
 const about = {
-  statement: [
-    "General Assembly Software Engineering Immersive graduate (2021)",
-    "Olympic College graduate (2021)",
-    "Energized by successes, both big and small",
-    "Ready to use my skillset to build and iterate upon web applications, especially on the front-end",
+  education: [
+    "General Assembly (2021), Certificate, Software Engineering Immersive",
+    "Olympic College (2021), A.S.,Electrical & Computer Engineering",
+  ],
+  motivations: [
+    "Successes, both large and small",
+    "Opportunities to use my skillset on front-end web functionality",
   ],
   hobbies: [
-    "Creating vector graphics",
-    "Distance running",
+    "Creating vector graphics on Inkscape",
+    "Running (usually 3-4 miles)",
     "Solving calculus problems (only when bored)",
   ],
   memorized: ["U.S. presidents", "U.S. state capitals", "Greek alphabet"],
 };
 
-const statementItems = about.statement.map((item, i) => (
+const educationItems = about.education.map((item, i) => (
+  <li key={i}>{item}</li>
+));
+
+const motivationItems = about.motivations.map((item, i) => (
   <li key={i}>{item}</li>
 ));
 
@@ -28,8 +34,12 @@ const About = () => {
     <div>
       <h1 className="text-3xl font-bold">About Me</h1>
       <div>
-        <h1 className="text-2xl font-bold">Background</h1>
-        <ul>{statementItems}</ul>
+        <h1 className="text-2xl font-bold">Education</h1>
+        <ul>{educationItems}</ul>
+      </div>
+      <div>
+        <h1 className="text-2xl font-bold">What Motivates Me</h1>
+        <ul>{motivationItems}</ul>
       </div>
       <div>
         <h1 className="text-2xl font-bold">Non-Coding Hobbies</h1>

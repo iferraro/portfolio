@@ -109,8 +109,11 @@ const personalProjectItems = personalProjects.map((item, i) => (
 // const personalProjectItems = personalProjects.map(item)
 
 const Projects = () => {
+  const handleScroll = () => {
+    console.log(window.scrollY);
+  };
   return (
-    <div>
+    <div onScrollCapture={handleScroll}>
       <h1 className="text-3xl font-bold">Projects</h1>
       <div>
         <h1 className="text-2xl font-bold">General Assembly</h1>

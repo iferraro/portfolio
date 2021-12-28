@@ -7,7 +7,7 @@ import Footer from "./features/Footer/Footer";
 
 function App() {
   return (
-    <div className="bg-theme-dark text-theme-light">
+    <div className="p-4 bg-black text-theme-light">
       <Header />
       <About />
       <Projects />
