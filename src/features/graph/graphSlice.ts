@@ -1,13 +1,12 @@
-import functionPlot from "function-plot";
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState, AppThunk } from "../../app/store";
 
 export interface GraphState {
-  equation: string;
+  equation: string; // tangent line equation
 }
 
 const initialState: GraphState = {
-  equation: "x", // this is what the tangent line function evaluates to when t=0
+  equation: "window.scrollY = 0; sin(window.scrollY) = 0",
 };
 
 export const graphSlice = createSlice({
@@ -15,41 +14,15 @@ export const graphSlice = createSlice({
   initialState,
   reducers: {
     redefine: (state, action: PayloadAction<number>) => {
-      state.equation = `cos(${action.payload})*(x-${action.payload})+sin(${action.payload})`;
+      state.equation = `window.scrollY = ${
+        action.payload
+      }; sin(window.scrollY) = ${Math.sin(action.payload)}`;
     },
   },
 });
 
 export const { redefine } = graphSlice.actions;
 
-export const selectEquation = (state: RootState) => state.graph.equation // this is GraphState.equation
-
-// let contentsBounds = document.body.getBoundingClientRect();
-// let width = 800;
-// let height = 500;
-// let ratio = contentsBounds.width / width;
-// width *= ratio;
-// height *= ratio;
-
-// const showGraph = async () => {
-//   const returnedGraph = await functionPlot({
-//     target: "#graph",
-//     width,
-//     height,
-//     yAxis: { domain: [0, 2 * Math.PI] },
-//     grid: false,
-//     disableZoom: true,
-//     data: [
-//       {
-//         fn: "sin(x)",
-//         derivative: {
-//           fn: "cos(x)",
-//           updateOnMouseMove: true,
-//         },
-//       },
-//     ],
-//   });
-//   return returnedGraph;
-// };
+export const selectEquation = (state: RootState) => state.graph.equation; // this is GraphState.equation
 
 export default graphSlice.reducer;
