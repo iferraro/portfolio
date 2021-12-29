@@ -2,11 +2,11 @@ import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState, AppThunk } from "../../app/store";
 
 export interface GraphState {
-  equation: string; // tangent line equation
+  equation: number; // tangent line equation
 }
 
 const initialState: GraphState = {
-  equation: "window.scrollY = 0; sin(window.scrollY) = 0",
+  equation: 0
 };
 
 export const graphSlice = createSlice({
@@ -14,9 +14,7 @@ export const graphSlice = createSlice({
   initialState,
   reducers: {
     redefine: (state, action: PayloadAction<number>) => {
-      state.equation = `window.scrollY = ${
-        action.payload
-      }; sin(window.scrollY) = ${Math.sin(action.payload)}`;
+      state.equation = Math.sin(action.payload);
     },
   },
 });
