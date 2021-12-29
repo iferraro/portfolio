@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div>
-      <p>This site was made using TypeScript and Redux</p>
+      <p>This site was made using TypeScript, React and Redux</p>
       <br />
     </div>
   );

@@ -1,8 +1,9 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
-import projectsReducer from "../features/projects/projectsSlice";
+import graphReducer from "../features/graph/graphSlice";
+
 export const store = configureStore({
   reducer: {
-    projects: projectsReducer,
+    graph: graphReducer,
   },
 });
 
