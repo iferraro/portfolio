@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { useAppSelector, useAppDispatch } from "../../app/hooks";
 import { redefine, selectEquation } from "./graphSlice";
 
@@ -11,11 +10,10 @@ const Graph = () => {
   window.addEventListener("scroll", handleScroll);
 
   return (
-    <div
-      id="graph"
-      className="sticky top-0 right-0 float-right text-right w-1/2 bg-black"
-    >
+    <div id="graph" className="sticky top-0 w-1/2 bg-black">
       <p>{equation}</p>
+      {/* putting graph inside of sub-component will cause graph to only stay
+      inside the sub-component, even if sticky */}
     </div>
   );
 };

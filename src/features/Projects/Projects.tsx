@@ -1,5 +1,3 @@
-import Graph from "../graph/Graph";
-
 interface Project {
   // iconLink: string;
   title: string;
@@ -117,7 +115,6 @@ const Projects = () => {
   return (
     <div onScrollCapture={handleScroll}>
       <h1 className="text-3xl font-bold">Projects</h1>
-      <Graph />
       <div>
         <h1 className="text-2xl font-bold">General Assembly</h1>
         {generalAssemblyProjectItems}

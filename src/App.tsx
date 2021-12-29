@@ -1,4 +1,5 @@
 import logo from "./logo.svg";
+import Graph from "./features/graph/Graph";
 import Header from "./features/Header/Header";
 import About from "./features/About/About";
 import Projects from "./features/Projects/Projects";
@@ -9,6 +10,7 @@ function App() {
   return (
     <div className="p-4 bg-theme-dark text-theme-light">
       <Header />
+      <Graph />
       <About />
       <Projects />
       <Contact />
