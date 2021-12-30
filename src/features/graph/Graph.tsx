@@ -20,7 +20,7 @@ const Graph = () => {
   const t = useAppSelector(selectT);
   const dispatch = useAppDispatch();
   const handleScroll = () => {
-    dispatch(redefine(window.scrollY));
+    dispatch(redefine());
   };
   window.addEventListener("scroll", handleScroll);
 
