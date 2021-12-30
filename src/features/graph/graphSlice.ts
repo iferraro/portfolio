@@ -2,25 +2,25 @@ import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState, AppThunk } from "../../app/store";
 
 export interface GraphState {
-  equation: number; // tangent line equation
+  t: number; // AKA window.scrollY; called t for use in sine equation
 }
 
 const initialState: GraphState = {
-  equation: 0
+  t: 0,
 };
 
 export const graphSlice = createSlice({
-  name: "equation",
+  name: "t",
   initialState,
   reducers: {
     redefine: (state, action: PayloadAction<number>) => {
-      state.equation = Math.sin(action.payload);
+      state.t = window.scrollY;
     },
   },
 });
 
 export const { redefine } = graphSlice.actions;
 
-export const selectEquation = (state: RootState) => state.graph.equation; // this is GraphState.equation
+export const selectT = (state: RootState) => state.graph.t; // this is GraphState.equation
 
 export default graphSlice.reducer;
