@@ -13,8 +13,8 @@ export const graphSlice = createSlice({
   name: "t",
   initialState,
   reducers: {
-    redefine: (state) => {
-      state.t = window.scrollY;
+    redefine: (state, action: PayloadAction<number>) => {
+      state.t = action.payload;
     },
   },
 });
