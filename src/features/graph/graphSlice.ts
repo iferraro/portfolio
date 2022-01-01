@@ -21,6 +21,6 @@ export const graphSlice = createSlice({
 
 export const { redefine } = graphSlice.actions;
 
-export const selectT = (state: RootState) => state.graph.t; // this is GraphState.equation
+export const selectT = (state: RootState) => state.graph.t; // this is GraphState.t
 
 export default graphSlice.reducer;

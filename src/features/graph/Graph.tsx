@@ -1,24 +1,20 @@
 import { useAppSelector, useAppDispatch } from "../../app/hooks";
 import { redefine, selectT } from "./graphSlice";
 
-const sineCriteria = {
-  // could also make an interface/class Criteria/graphCriteria; sineCriteria would be an instance of it
-  domain: [0, 2 * Math.PI],
-  step: 100,
-  k: 100,
-};
-
-const svgCriteria = {
-  width: (sineCriteria.domain[1] - sineCriteria.domain[0]) * sineCriteria.k,
-  height: 200,
-  yLine: 100,
-  fillColor: "#000",
-  strokeColor: "#000",
-};
 const baseUnit = 40;
-const d = `
+
+const pyramidUnit = 80;
+
+const boxPath = `
+  m
+    0,${8 + 2 * baseUnit}
+  h
+    ${4 * Math.PI * baseUnit - 16}
+`;
+
+const sinePath = `
   m 
-    0,${10 + 2 * baseUnit} 
+    0,${8 + 2 * baseUnit} 
   c 
     ${baseUnit},${-1 * baseUnit}
     ${2 * baseUnit},${-2 * baseUnit}
@@ -32,7 +28,12 @@ const d = `
     ${baseUnit},0
     ${2 * baseUnit},${-1 * baseUnit}
     ${3 * baseUnit},${-2 * baseUnit}
-    `;
+`;
+
+// points 1, 2, 3: [0, pi/2]
+// points 4, 5 ,6: [pi/2, pi]
+// points 7, 8, 9: [pi, 3pi/2]
+// points 10, 11, 12: [3pi/2, 2pi]
 
 const Graph = () => {
   const t = useAppSelector(selectT);
@@ -40,13 +41,45 @@ const Graph = () => {
   const handleScroll = () => {
     dispatch(redefine(window.scrollY));
   };
+  const pyramidFrontPath = `
+    m
+      0,${6 * pyramidUnit}
+    l
+      ${6 * pyramidUnit},0
+      ${-1 * pyramidUnit},${-2 * pyramidUnit - t}
+    z
+  `;
+
+  const pyramidSidePath = `
+    m
+      ${6 * pyramidUnit},${6 * pyramidUnit}
+    l
+      ${4 * pyramidUnit},${-2 * pyramidUnit}
+      ${-5 * pyramidUnit},${-1 * (t - 1)}
+    z
+  `;
   window.addEventListener("scroll", handleScroll);
 
   return (
     <div className="sticky top-0">
-      <p className="text-xl font-bold bg-theme-dark">t = {t}</p>
-      <svg className="w-screen h-60">
-        <path d={d} strokeWidth={5} stroke="#AD7109" fill="none" />
+      <p className="m-0 w-1/3 text-xl font-bold bg-black">t = {t}</p>
+      <svg className="w-full h-screen">
+        <path
+          d={pyramidFrontPath}
+          fill="#004056"
+          stroke="#AD7109"
+          strokeWidth={5}
+          strokeLinejoin="round"
+        />
+        <path
+          d={pyramidSidePath}
+          fill="#004056"
+          stroke="#AD7109"
+          strokeWidth={5}
+          strokeLinejoin="round"
+        />
+        {/* <path d={sinePath} stroke="#AD7109" strokeWidth={2} fill="none" /> */}
+        {/* <path d={boxPath} stroke="white" strokeWidth={2} fill="none" /> */}
       </svg>
       {/* putting graph inside of sub-component will cause graph to only stay
       inside the sub-component, even if sticky */}

@@ -11,6 +11,7 @@ const App = () => {
     <div className="p-4 bg-theme-dark text-theme-light">
       <Header />
       <Graph />
+      
       <About />
       <Projects />
       <Contact />
