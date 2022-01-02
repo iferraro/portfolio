@@ -5,13 +5,14 @@ import About from "./features/About/About";
 import Projects from "./features/Projects/Projects";
 import Contact from "./features/Contact/Contact";
 import Footer from "./features/Footer/Footer";
+import Northwest from "./features/Northwest/Northwest";
 
 const App = () => {
   return (
     <div className="p-4 bg-theme-dark text-theme-light">
       <Header />
       <Graph />
-      
+      <Northwest />
       <About />
       <Projects />
       <Contact />

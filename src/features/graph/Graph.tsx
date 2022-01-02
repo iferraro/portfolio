@@ -38,12 +38,12 @@ const Graph = () => {
   window.addEventListener("scroll", handleScroll);
 
   return (
-    <div className="sticky top-0">
-      <p className="m-0 w-1/3 text-xl font-bold bg-black">t = {t}</p>
-      <svg className="w-full">
+    <div className="fixed top-0">
+      <p className="w-full text-xl font-bold bg-black">t = {t}</p>
+      {/* <svg className="w-full">
         <path d={boxPath} fill="blue" />
         <path d={sinePath} fill="#AD7109" />
-      </svg>
+      </svg> */}
       {/* putting graph inside of sub-component will cause graph to only stay
       inside the sub-component, even if sticky */}
     </div>
