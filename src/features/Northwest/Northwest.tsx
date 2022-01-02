@@ -3,7 +3,7 @@ import { selectT } from "../graph/graphSlice";
 
 const letterWidth = 150; // desired width of 'N' and 'W'
 
-const viewBox = `0 0 ${2.75 * letterWidth} ${1.5 * letterWidth}`
+const viewBox = `0 0 ${2.75 * letterWidth} ${1.5 * letterWidth}`;
 
 const bevel = (base: number, height: number, width: number) => {
   const bSqu = Math.pow(base, 2);
@@ -29,26 +29,15 @@ const boxPath = `
   z
 `;
 
-const Northwest = () => {
-  const t = useAppSelector(selectT);
-
-  const nPath = `
+const nPath = `
   M 
     ${0.25 * letterWidth},${0.25 * letterWidth} 
   v
     ${letterWidth} 
   h
-    ${0.5 * letterWidth}
-  v
-    ${-0.5 * (letterWidth - beta)}
-  l
-    ${0.5 * letterWidth},${0.5 * (letterWidth - beta)}
+    ${letterWidth}
   v
     ${-1 * letterWidth}
-  h
-    ${-0.5 * letterWidth}
-  v
-    ${0.5 * (letterWidth - beta)}
   z
 `;
 
@@ -56,15 +45,54 @@ const wPath = `
   M
     ${1.5 * letterWidth},${0.25 * letterWidth}
   v
-    ${letterWidth}
+    ${letterWidth} 
   h
     ${letterWidth}
   v
     ${-1 * letterWidth}
+  z
+`;
+
+const Northwest = () => {
+  const t = useAppSelector(selectT);
+
+  const nToothTopPath = `
+  M
+    ${0.25 * letterWidth},${0.25 * letterWidth}
+  h
+    ${0.5 * letterWidth}
+  v
+    ${t <= 0.5 * (letterWidth - beta) ? t : 0.5 * (letterWidth - beta)}
+  z
+`;
+
+  const nToothBottomPath = `
+  M
+    ${1.25 * letterWidth},${1.25 * letterWidth}
+  h
+    ${-0.5 * letterWidth}
+  v
+    ${t <= 0.5 * (letterWidth - beta) ? -1 * t : -0.5 * (letterWidth - beta)}
+  z
+`;
+
+  const wToothLeftPath = `
+  M
+    ${1.5 * letterWidth},${0.25 * letterWidth}
+  h
+    ${0.5 * letterWidth}
   l
-    ${-0.25 * letterWidth},${0.25 * letterWidth}
-    ${-0.25 * letterWidth},${-0.25 * letterWidth}
-    ${-0.25 * letterWidth},${0.25 * letterWidth}
+    ${-0.25 * letterWidth},${t <= 0.25 * letterWidth ? t : 0.25 * letterWidth}
+  z
+`;
+
+  const wToothRightPath = `
+  M
+    ${2 * letterWidth},${0.25 * letterWidth}
+  h
+    ${0.5 * letterWidth}
+  l
+    ${-0.25 * letterWidth},${t <= 0.25 * letterWidth ? t : 0.25 * letterWidth}
   z
 `;
 
@@ -72,9 +100,13 @@ const wPath = `
     <div className="fixed w-1/2">
       <p className="text-xl text-black font-bold bg-green-400">t = {t}</p>
       <svg viewBox={viewBox}>
-        <path d={boxPath} fill="#00FF00"/>
+        <path d={boxPath} fill="#00FF00" />
         <path d={nPath} fill="black" />
+        <path d={nToothTopPath} fill="#00FF00" />
+        <path d={nToothBottomPath} fill="#00FF00" />
         <path d={wPath} fill="black" />
+        <path d={wToothLeftPath} fill="#00FF00" />
+        <path d={wToothRightPath} fill="#00FF00" />
       </svg>
       {/* putting graph inside of sub-component will cause graph to only stay
       inside the sub-component, even if sticky */}
