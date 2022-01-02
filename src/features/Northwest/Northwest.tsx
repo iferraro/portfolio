@@ -29,20 +29,6 @@ const boxPath = `
   z
 `;
 
-
-
-const wPath = `
-  M
-    ${1.5 * letterWidth},${0.25 * letterWidth}
-  v
-    ${letterWidth} 
-  h
-    ${letterWidth}
-  v
-    ${-1 * letterWidth}
-  z
-`;
-
 const Northwest = () => {
   const t = useAppSelector(selectT);
 
@@ -54,47 +40,31 @@ const Northwest = () => {
   h
     ${0.5 * letterWidth}
   v
-    ${(t <= 0.5*(letterWidth-beta) ? -t : -0.5*(letterWidth-beta))}
+    ${t <= 0.5 * (letterWidth - beta) ? -t : -0.5 * (letterWidth - beta)}
   L
-    ${1.25*letterWidth}, ${1.25*letterWidth}
-  z
-`;
-
-  const nToothTopPath = `
-  M
-    ${0.25 * letterWidth},${0.25 * letterWidth}
+    ${1.25 * letterWidth}, ${1.25 * letterWidth}
+  v
+    ${-letterWidth}
   h
-    ${0.5 * letterWidth}
+    ${-0.5 * letterWidth}
   v
     ${t <= 0.5 * (letterWidth - beta) ? t : 0.5 * (letterWidth - beta)}
   z
 `;
 
-  const nToothBottomPath = `
-  M
-    ${1.25 * letterWidth},${1.25 * letterWidth}
-  h
-    ${-0.5 * letterWidth}
-  v
-    ${t <= 0.5 * (letterWidth - beta) ? -1 * t : -0.5 * (letterWidth - beta)}
-  z
-`;
-
-  const wToothLeftPath = `
+  const wPath = `
   M
     ${1.5 * letterWidth},${0.25 * letterWidth}
+  v
+    ${letterWidth} 
   h
-    ${0.5 * letterWidth}
+    ${letterWidth}
+  v
+    ${-letterWidth}
   l
     ${-0.25 * letterWidth},${t <= 0.25 * letterWidth ? t : 0.25 * letterWidth}
-  z
-`;
-
-  const wToothRightPath = `
-  M
-    ${2 * letterWidth},${0.25 * letterWidth}
-  h
-    ${0.5 * letterWidth}
+  L
+    ${2 * letterWidth} ${0.25 * letterWidth}
   l
     ${-0.25 * letterWidth},${t <= 0.25 * letterWidth ? t : 0.25 * letterWidth}
   z
@@ -105,12 +75,8 @@ const Northwest = () => {
       <p className="text-xl text-black font-bold bg-green-400">t = {t}</p>
       <svg viewBox={viewBox}>
         {/* <path d={boxPath} fill="#00FF00" /> */}
-        <path d={nPath} fill="black" stroke="#004056" />
-        {/* <path d={nToothTopPath} fill="#004056" />
-        <path d={nToothBottomPath} fill="#004056" /> */}
-        <path d={wPath} fill="black" stroke="#004056" />
-        {/* <path d={wToothLeftPath} fill="#004056" />
-        <path d={wToothRightPath} fill="#004056" /> */}
+        <path d={nPath} fill="black" />
+        <path d={wPath} fill="black" />
       </svg>
       {/* putting graph inside of sub-component will cause graph to only stay
       inside the sub-component, even if sticky */}
