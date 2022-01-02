@@ -100,13 +100,13 @@ const Northwest = () => {
     <div className="fixed w-1/2">
       <p className="text-xl text-black font-bold bg-green-400">t = {t}</p>
       <svg viewBox={viewBox}>
-        <path d={boxPath} fill="#00FF00" />
-        <path d={nPath} fill="black" />
-        <path d={nToothTopPath} fill="#00FF00" />
-        <path d={nToothBottomPath} fill="#00FF00" />
-        <path d={wPath} fill="black" />
-        <path d={wToothLeftPath} fill="#00FF00" />
-        <path d={wToothRightPath} fill="#00FF00" />
+        {/* <path d={boxPath} fill="#00FF00" /> */}
+        <path d={nPath} fill="black" stroke="#004056" strokeWidth={1} />
+        <path d={nToothTopPath} fill="#004056" />
+        <path d={nToothBottomPath} fill="#004056" />
+        <path d={wPath} fill="black" stroke="#004056" strokeWidth={1} />
+        <path d={wToothLeftPath} fill="#004056" />
+        <path d={wToothRightPath} fill="#004056" />
       </svg>
       {/* putting graph inside of sub-component will cause graph to only stay
       inside the sub-component, even if sticky */}
