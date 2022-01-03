@@ -1,18 +1,19 @@
 import logo from "./logo.svg";
-import Graph from "./features/graph/Graph";
+import Graph from "./features/indicator/Indicator";
 import Header from "./features/Header/Header";
 import About from "./features/About/About";
 import Projects from "./features/Projects/Projects";
 import Contact from "./features/Contact/Contact";
 import Footer from "./features/Footer/Footer";
 import Northwest from "./features/Northwest/Northwest";
-
+import x from "./features/constant";
 const App = () => {
+  console.log(x, "<= this is x");
+
   return (
-    <div className="p-4 bg-theme-dark text-theme-light">
+    <div className="p-4 bg-theme-dark">
       <Header />
       <Graph />
-      <Northwest />
       <About />
       <Projects />
       <Contact />

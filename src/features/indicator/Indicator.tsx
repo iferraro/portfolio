@@ -1,28 +1,5 @@
 import { useAppSelector, useAppDispatch } from "../../app/hooks";
-import { redefine, selectT } from "./graphSlice";
-
-const baseUnit = 40;
-
-const boxPath = `
-  m
-    0,0
-  v
-    ${4 * baseUnit}
-  h
-    ${2 * Math.PI * baseUnit}
-  v
-   ${-4 * baseUnit}
-  z
-`;
-
-const sinePath = `
-  M 
-    0,${baseUnit} 
-  c 
-    ${baseUnit},${-1 * baseUnit}
-    0,${-1 * baseUnit}
-    ${(Math.PI / 2) * baseUnit},${-1 * baseUnit}
-`;
+import { redefine, selectT } from "./scrollSlice";
 
 // points 1, 2, 3: [0, pi/2]
 // points 4, 5 ,6: [pi/2, pi]
@@ -39,11 +16,7 @@ const Graph = () => {
 
   return (
     <div className="fixed top-0">
-      <p className="w-full text-xl font-bold bg-black">t = {t}</p>
-      {/* <svg className="w-full">
-        <path d={boxPath} fill="blue" />
-        <path d={sinePath} fill="#AD7109" />
-      </svg> */}
+      <p className="w-full text-xl text-black font-bold bg-green-400">t = {t}</p>
       {/* putting graph inside of sub-component will cause graph to only stay
       inside the sub-component, even if sticky */}
     </div>

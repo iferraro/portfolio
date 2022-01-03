@@ -1,3 +1,6 @@
+import Northwest from "../Northwest/Northwest";
+import x from "../constant";
+
 const about = {
   education: [
     "General Assembly (2021), Certificate, Software Engineering Immersive",
@@ -5,6 +8,7 @@ const about = {
   ],
   motivations: [
     "Successes, both large and small",
+    "Spur-of-the-moment ideas",
     "Opportunities to use my skillset on front-end web functionality",
   ],
   hobbies: [
@@ -32,23 +36,39 @@ const memorizedItems = about.memorized.map((item, i) => (
 const About = () => {
   return (
     <div>
-      <h1 className="text-3xl font-bold">About Me</h1>
-      <div>
-        <h1 className="text-2xl font-bold">Education</h1>
-        <ul>{educationItems}</ul>
+      <div className="flex flex-wrap justify-center">
+        <div style={{ width: x, height: x }} className="m-6 bg-blue-200">
+          <h1 className="text-3xl font-bold">About Me</h1>
+        </div>
+        <div style={{ width: x, height: x }} className="m-6 bg-blue-200">
+          <h1 className="text-2xl font-bold">Education</h1>
+          <ul>{educationItems}</ul>
+        </div>
       </div>
-      <div>
-        <h1 className="text-2xl font-bold">What Motivates Me</h1>
-        <ul>{motivationItems}</ul>
+
+      <div className="flex flex-wrap justify-center">
+        <div style={{ width: x, height: x }} className="m-6 bg-blue-200">
+          <h1 className="text-2xl font-bold">What Motivates Me</h1>
+          <ul>{motivationItems}</ul>
+        </div>
+        <div style={{ width: x, height: x }} className="m-6 bg-blue-200">
+          <h1 className="text-2xl font-bold">Non-Coding Hobbies</h1>
+          <ul>{hobbyItems}</ul>
+        </div>
       </div>
-      <div>
-        <h1 className="text-2xl font-bold">Non-Coding Hobbies</h1>
-        <ul>{hobbyItems}</ul>
+
+      <div className="flex flex-wrap justify-center">
+        <div style={{ width: x, height: x }} className="m-6 bg-blue-200">
+          <h1 className="text-2xl font-bold">Things I've Memorized</h1>
+          <ul>{memorizedItems}</ul>
+        </div>
+        <div style={{ width: x, height: x }} className="m-6 bg-blue-200">
+          {/* <ul>{hobbyItems}</ul> */}
+        </div>
       </div>
-      <div>
-        <h1 className="text-2xl font-bold">Things I've Memorized</h1>
-        <ul>{memorizedItems}</ul>
-      </div>
+
+
+        <Northwest />
     </div>
   );
 };

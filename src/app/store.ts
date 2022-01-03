@@ -1,5 +1,5 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
-import graphReducer from "../features/graph/graphSlice";
+import graphReducer from "../features/indicator/scrollSlice";
 
 export const store = configureStore({
   reducer: {

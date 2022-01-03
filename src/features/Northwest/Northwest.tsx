@@ -1,7 +1,7 @@
 import { useAppSelector } from "../../app/hooks";
-import { selectT } from "../graph/graphSlice";
+import { selectT } from "../indicator/scrollSlice";
 
-const letterWidth = 150; // desired width of 'N' and 'W'
+const letterWidth = 192; // desired width of 'N' and 'W'
 
 const viewBox = `0 0 ${2.75 * letterWidth} ${1.5 * letterWidth}`;
 
@@ -71,12 +71,11 @@ const Northwest = () => {
 `;
 
   return (
-    <div className="fixed w-1/2">
-      <p className="text-xl text-black font-bold bg-green-400">t = {t}</p>
+    <div className="flex justify-center">
       <svg viewBox={viewBox}>
-        {/* <path d={boxPath} fill="#00FF00" /> */}
-        <path d={nPath} fill="black" />
-        <path d={wPath} fill="black" />
+        <path d={boxPath} className="fill-black" />
+        <path d={nPath} className="fill-green-400" />
+        <path d={wPath} className="fill-green-400" />
       </svg>
       {/* putting graph inside of sub-component will cause graph to only stay
       inside the sub-component, even if sticky */}

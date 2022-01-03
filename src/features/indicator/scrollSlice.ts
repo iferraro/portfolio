@@ -1,15 +1,15 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState, AppThunk } from "../../app/store";
 
-export interface GraphState {
+export interface ScrollState {
   t: number; // AKA window.scrollY; called t for use in sine equation
 }
 
-const initialState: GraphState = {
+const initialState: ScrollState = {
   t: 0,
 };
 
-export const graphSlice = createSlice({
+export const scrollSlice = createSlice({
   name: "t",
   initialState,
   reducers: {
@@ -19,8 +19,8 @@ export const graphSlice = createSlice({
   },
 });
 
-export const { redefine } = graphSlice.actions;
+export const { redefine } = scrollSlice.actions;
 
-export const selectT = (state: RootState) => state.graph.t; // this is GraphState.t
+export const selectT = (state: RootState) => state.graph.t; // this is ScrollState.t
 
-export default graphSlice.reducer;
+export default scrollSlice.reducer;
