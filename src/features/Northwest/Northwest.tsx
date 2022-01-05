@@ -73,9 +73,9 @@ const Northwest = () => {
   return (
     <div className="flex justify-center">
       <svg viewBox={viewBox}>
-        <path d={boxPath} className="fill-black" />
-        <path d={nPath} className="fill-green-400" />
-        <path d={wPath} className="fill-green-400" />
+        {/* <path d={boxPath} className="fill-black" /> */}
+        <path d={nPath} className="fill-theme-dark" />
+        <path d={wPath} className="fill-theme-dark" />
       </svg>
       {/* putting graph inside of sub-component will cause graph to only stay
       inside the sub-component, even if sticky */}
