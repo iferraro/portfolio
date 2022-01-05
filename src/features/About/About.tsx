@@ -8,7 +8,7 @@ const about = {
   ],
   motivations: [
     "Successes, both large and small",
-    "Spur-of-the-moment ideas",
+    "Chances to formulate original solutions to problems",
     "Opportunities to use my skillset on front-end web functionality",
   ],
   hobbies: [
