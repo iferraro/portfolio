@@ -11,7 +11,7 @@ const App = () => {
   console.log(x, "<= this is x");
 
   return (
-    <div className="p-4 bg-theme-dark">
+    <div className="p-4 flex flex-col justify-center bg-theme-light">
       <Header />
       <Graph />
       <About />

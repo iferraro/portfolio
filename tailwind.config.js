@@ -3,9 +3,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "theme-light": "#AD7109",
-        "theme-dark": "#004056",
+        "theme-light": "#EDEFEE",
+        "theme-dark": "#1C292C",
       },
+      transitionTimingFunction: {
+        'in-expo': 'cubic-bezier(0.81,0.29,0.06,0.94)',
+        'out-expo': 'cubic-bezier(0.81,0.29,0.06,0.94)',
+      }
     },
   },
   plugins: [],

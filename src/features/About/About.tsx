@@ -66,8 +66,6 @@ const About = () => {
           {/* <ul>{hobbyItems}</ul> */}
         </div>
       </div>
-
-
         <Northwest />
     </div>
   );
