@@ -36,37 +36,24 @@ const memorizedItems = about.memorized.map((item, i) => (
 const About = () => {
   return (
     <div>
-      <div className="flex flex-wrap justify-center">
-        <div style={{ width: x, height: x }} className="m-6 bg-blue-200">
-          <h1 className="text-3xl font-bold">About Me</h1>
-        </div>
-        <div style={{ width: x, height: x }} className="m-6 bg-blue-200">
+      <br />
+      <h1 className="text-center text-4xl text-theme-dark font-bold">About Me</h1>
+      <br />
+      <div className="flex flex-wrap justify-center bg-blue-200">
+        <div style={{ width: x }} className="mx-6">
           <h1 className="text-2xl font-bold">Education</h1>
           <ul>{educationItems}</ul>
-        </div>
-      </div>
-
-      <div className="flex flex-wrap justify-center">
-        <div style={{ width: x, height: x }} className="m-6 bg-blue-200">
           <h1 className="text-2xl font-bold">What Motivates Me</h1>
           <ul>{motivationItems}</ul>
         </div>
-        <div style={{ width: x, height: x }} className="m-6 bg-blue-200">
+        <div style={{ width: x }} className="mx-6">
           <h1 className="text-2xl font-bold">Non-Coding Hobbies</h1>
           <ul>{hobbyItems}</ul>
-        </div>
-      </div>
-
-      <div className="flex flex-wrap justify-center">
-        <div style={{ width: x, height: x }} className="m-6 bg-blue-200">
           <h1 className="text-2xl font-bold">Things I've Memorized</h1>
           <ul>{memorizedItems}</ul>
         </div>
-        <div style={{ width: x, height: x }} className="m-6 bg-blue-200">
-          {/* <ul>{hobbyItems}</ul> */}
-        </div>
       </div>
-        <Northwest />
+      <Northwest />
     </div>
   );
 };

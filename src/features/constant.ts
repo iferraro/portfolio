@@ -1,3 +1,3 @@
-const x = 660;
+const x = 340;
 
 export default x;

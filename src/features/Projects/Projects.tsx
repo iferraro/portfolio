@@ -1,3 +1,5 @@
+import x from "../constant";
+
 interface Project {
   // iconLink: string;
   title: string;
@@ -114,14 +116,20 @@ const Projects = () => {
   };
   return (
     <div onScrollCapture={handleScroll}>
-      <h1 className="text-3xl font-bold">Projects</h1>
-      <div>
-        <h1 className="text-2xl font-bold">General Assembly</h1>
-        {generalAssemblyProjectItems}
-      </div>
-      <div>
-        <h1 className="text-2xl font-bold">Personal</h1>
-        {personalProjectItems}
+      <br />
+      <h1 className="text-center text-4xl text-theme-dark font-bold">
+        Projects
+      </h1>
+      <br />
+      <div className="flex flex-wrap justify-start bg-blue-200">
+        <div>
+          <h1 className="text-2xl font-bold">General Assembly</h1>
+          {generalAssemblyProjectItems}
+        </div>
+        <div>
+          <h1 className="text-2xl font-bold">Personal</h1>
+          {personalProjectItems}
+        </div>
       </div>
     </div>
   );

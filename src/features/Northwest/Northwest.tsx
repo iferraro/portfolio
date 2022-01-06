@@ -71,12 +71,17 @@ const Northwest = () => {
 `;
 
   return (
-    <div className="flex justify-center">
-      <svg viewBox={viewBox}>
-        {/* <path d={boxPath} className="fill-black" /> */}
-        <path d={nPath} className="fill-theme-dark" />
-        <path d={wPath} className="fill-theme-dark" />
-      </svg>
+    <div className="flex flex-col justify-center">
+      <div>
+        <h1 className="text-center text-2xl font-bold">Where do I call home?</h1>
+      </div>
+      <div>
+        <svg viewBox={viewBox}>
+          {/* <path d={boxPath} className="fill-black" /> */}
+          <path d={nPath} className="fill-theme-dark" />
+          <path d={wPath} className="fill-theme-dark" />
+        </svg>
+      </div>
       {/* putting graph inside of sub-component will cause graph to only stay
       inside the sub-component, even if sticky */}
     </div>

@@ -1,7 +1,8 @@
 const Contact = () => {
   return (
     <div>
-      <h1 className="text-3xl font-bold">Contact</h1>
+      <br />
+      <h1 className="text-4xl font-bold">Contact</h1>
       <ul>
         <li>
           <a href="mailto:ieferraro@outlook.com">Email</a>
