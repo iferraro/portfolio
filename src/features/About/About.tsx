@@ -37,9 +37,10 @@ const About = () => {
   return (
     <div>
       <br />
+      <br />
       <h1 className="text-center text-4xl text-theme-dark font-bold">About Me</h1>
       <br />
-      <div className="flex flex-wrap justify-center bg-blue-200">
+      <div className="flex flex-wrap justify-center">
         <div style={{ width: x }} className="mx-6">
           <h1 className="text-2xl font-bold">Education</h1>
           <ul>{educationItems}</ul>
