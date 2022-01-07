@@ -1,5 +1,6 @@
-import { useAppSelector } from "../../app/hooks";
-import { selectT } from "../indicator/scrollSlice";
+import { useEffect } from "react";
+import { useAppSelector, useAppDispatch } from "../../app/hooks";
+import { redefine, selectT } from "../indicator/scrollSlice";
 
 const letterWidth = 192; // desired width of 'N' and 'W'
 
@@ -31,6 +32,14 @@ const boxPath = `
 
 const Northwest = () => {
   const t = useAppSelector(selectT);
+  const dispatch = useAppDispatch();
+  const northwestEl = document.getElementById("northwest");
+  const threshold: number = t + Number(northwestEl?.getBoundingClientRect().top);
+  const handleScroll = () => {
+    dispatch(redefine(window.scrollY));
+    console.log("the threshold is", threshold);
+  };
+  window.addEventListener("scroll", handleScroll);
 
   const nPath = `
   M 
@@ -73,9 +82,11 @@ const Northwest = () => {
   return (
     <div className="flex flex-col justify-center">
       <div>
-        <h1 className="text-center text-2xl font-bold">Where do I call home?</h1>
+        <h1 className="text-center text-2xl font-bold">
+          Where do I call home?
+        </h1>
       </div>
-      <div>
+      <div id="northwest">
         <svg viewBox={viewBox}>
           {/* <path d={boxPath} className="fill-black" /> */}
           <path d={nPath} className="fill-theme-dark" />

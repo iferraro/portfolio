@@ -1,7 +1,7 @@
 import x from "../constant";
 import { ReactComponent as IsaacLogo } from "../../IsaacLogo.svg";
 import { Transition } from "@headlessui/react";
-import { Fragment, useState, useEffect } from "react";
+import { useState } from "react";
 
 const Header = () => {
   const [isShowing, setIsShowing] = useState(false);
