@@ -1,31 +1,6 @@
-<svg width="383" height="420" version="1.1" viewBox="0 0 101 111" xmlns="http://www.w3.org/2000/svg">
-    <path d="
-            m -0.11 0
-            v 6.9
-            l 14 8
-            v 81
-            l -14 8
-            v 6.9
-            h 61
-            v -6.9
-            l -14 -8
-            v -81
-            l 14 -8
-            v -6.9
-            h -47
-            z
-            
-            m 68 0
-            v 36
-            l 33 19
-            v -55
-            z
-            
-            m -14 36
-            v 28
-            l 31 18
-            v -28
-            z
-        " />
+<svg width="145mm" height="158mm" version="1.1" viewBox="0 0 145 158" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(-160,-23)">
+        <path d="m160 23v9.9l20 11v116l-20 11v9.9h87v-9.9l-20-11v-116l20-11v-9.9h-67zm97 0v66l48 27v-93zm-20 66v40l44 25v-40z" />
+    </g>
 </svg>
    
