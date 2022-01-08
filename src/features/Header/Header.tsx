@@ -10,7 +10,7 @@ const Header = () => {
   }, 150);
 
   return (
-    <div style={{height: 152, backgroundColor: "#EDEFEE"}}>
+    <div>
       <Transition
         as="div"
         show={isShowing}
@@ -18,16 +18,12 @@ const Header = () => {
         enterFrom="opacity-0"
         enterTo="opacity-100"
       >
-        <div className="flex justify-center">
-          <div className="flex justify-end items-center mr-4">
+        <div className="flex flex-col justify-center">
+          <div className="flex justify-center">
             <IsaacLogo style={{ height: 152, width: 120, fill: "#1C292C" }} />
           </div>
-          <div className="flex flex-col justify-center text-theme-dark">
-            <h1 className="text-6xl font-bold">
-              Isaac
-              <br />
-              Ferraro
-            </h1>
+          <div className="flex flex-col justify-center text-center text-theme-dark">
+            <h1 className="text-6xl font-bold">Isaac Ferraro</h1>
             <h2 className="text-2xl font-bold">Web Developer</h2>
           </div>
         </div>

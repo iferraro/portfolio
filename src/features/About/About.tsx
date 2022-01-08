@@ -19,39 +19,39 @@ const about = {
   memorized: ["U.S. presidents", "U.S. state capitals", "Greek alphabet"],
 };
 
-const educationItems = about.education.map((item, i) => (
-  <li key={i}>{item}</li>
-));
+const makeItems = (arr: string[]) => {
+  return arr.map((item, i) => <li key={i}>{item}</li>);
+};
 
-const motivationItems = about.motivations.map((item, i) => (
-  <li key={i}>{item}</li>
-));
+const educationItems = makeItems(about.education);
 
-const hobbyItems = about.hobbies.map((item, i) => <li key={i}>{item}</li>);
+const motivationItems = makeItems(about.motivations);
 
-const memorizedItems = about.memorized.map((item, i) => (
-  <li key={i}>{item}</li>
-));
+const hobbyItems = makeItems(about.hobbies);
+
+const memorizedItems = makeItems(about.memorized);
 
 const About = () => {
   return (
     <div>
       <br />
       <br />
-      <h1 className="text-center text-4xl text-theme-dark font-bold">About Me</h1>
+      <h1 className="text-center text-4xl text-theme-dark font-bold">
+        About Me
+      </h1>
       <br />
       <div className="flex flex-wrap justify-center">
         <div style={{ width: x }} className="mx-6">
           <h1 className="text-2xl font-bold">Education</h1>
-          <ul>{educationItems}</ul>
+          <ul className="list-disc">{educationItems}</ul>
           <h1 className="text-2xl font-bold">What Motivates Me</h1>
-          <ul>{motivationItems}</ul>
+          <ul className="list-disc">{motivationItems}</ul>
         </div>
         <div style={{ width: x }} className="mx-6">
           <h1 className="text-2xl font-bold">Non-Coding Hobbies</h1>
-          <ul>{hobbyItems}</ul>
+          <ul className="list-disc">{hobbyItems}</ul>
           <h1 className="text-2xl font-bold">Things I've Memorized</h1>
-          <ul>{memorizedItems}</ul>
+          <ul className="list-disc">{memorizedItems}</ul>
         </div>
       </div>
       <Northwest />
