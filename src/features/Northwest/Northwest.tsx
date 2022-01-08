@@ -37,7 +37,7 @@ const Northwest = () => {
   const threshold: number = t + Number(northwestEl?.getBoundingClientRect().top);
   const handleScroll = () => {
     dispatch(redefine(window.scrollY));
-    console.log("the threshold is", threshold);
+    // console.log("the threshold is", threshold);
   };
   window.addEventListener("scroll", handleScroll);
 
@@ -83,7 +83,7 @@ const Northwest = () => {
     <div className="flex flex-col justify-center">
       <div>
         <h1 className="text-center text-2xl font-bold">
-          Where do I call home?
+          Where does Isaac call home?
         </h1>
       </div>
       <div id="northwest">

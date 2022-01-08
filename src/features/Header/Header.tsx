@@ -1,5 +1,5 @@
 import x from "../constant";
-import { ReactComponent as IsaacLogo } from "../../IsaacLogo.svg";
+import IsaacLogo from "../../IsaacLogo";
 import { Transition } from "@headlessui/react";
 import { useState } from "react";
 
@@ -20,7 +20,7 @@ const Header = () => {
       >
         <div className="flex flex-col justify-center">
           <div className="flex justify-center">
-            <IsaacLogo style={{ height: 152, width: 120, fill: "#1C292C" }} />
+            <IsaacLogo/>
           </div>
           <div className="flex flex-col justify-center text-center text-theme-dark">
             <h1 className="text-6xl font-bold">Isaac Ferraro</h1>

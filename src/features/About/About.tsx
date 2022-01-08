@@ -12,7 +12,7 @@ const about = {
     "Opportunities to use my skillset on front-end web functionality",
   ],
   hobbies: [
-    "Creating vector graphics on Inkscape",
+    "Creating vector graphics on Inkscape (such as my logo above)",
     "Running (usually 3-4 miles)",
     "Solving calculus problems (only when bored)",
   ],
