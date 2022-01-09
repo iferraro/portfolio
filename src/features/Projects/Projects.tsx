@@ -82,17 +82,17 @@ const makeItems = (
   }>
 ) => {
   return arr.map((item, i) => (
-    <div key={i}>
+    <div key={i} style={{ width: x }} className="mx-6">
       <h1 className="text-xl font-bold">{item.title}</h1>
       <h2>{item.description} using:</h2>
-      <ul>
+      <ul className="list-disc">
         {item.stack.map((tech: string, j: number) => (
           <li key={j}>{tech}</li>
         ))}
       </ul>
       <p>
         <a href={item.gitHubLink} className="text-blue-500">
-          GitHub link
+          GitHub
         </a>
       </p>
     </div>
@@ -111,9 +111,7 @@ const Projects = () => {
       </h1>
       <br />
       <div className="flex flex-wrap justify-center">
-        <div style={{ width: x }} className="mx-6">
-          <ul className="list-disc">{projectItems}</ul>
-        </div>
+          {projectItems}
       </div>
     </div>
   );
