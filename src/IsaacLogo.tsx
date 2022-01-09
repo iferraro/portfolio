@@ -1,43 +1,71 @@
-const IsaacLogo = () => {
-  return (
-    <svg
-      width="145mm"
-      height="168mm"
-      version="1.1"
-      viewBox="0 0 145 168"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="
-        m 0 0 
-        v 9.9
-        l 20 11
-        v 126
-        l -20 11
-        v 9.9 
-        h 87 
-        v -9.9 
-        l -20 -11
-        v -126 
-        l 20 -11
-        v -9.9
-        h-67 
-        z
-        
-        m 97 0
-        v 66
-        l 48 27
-        v -93 
-        z
+import { useState, useEffect } from "react";
+import { Transition } from "@headlessui/react";
 
-        m -20 66
-        v 40
-        l 44 25
-        v -40
-        z
-        "
-      />
-    </svg>
+const IsaacLogo = () => {
+  const [fPathDeltas, setFPathDeltas] = useState({ top: 0, mid: 0 });
+  const iPath = `
+    m 0 0 
+    v 9.9
+    l 20 11
+    v 126
+    l -20 11
+    v 9.9 
+    h 87 
+    v -9.9 
+    l -20 -11
+    v -126 
+    l 20 -11
+    v -9.9 
+    z
+    `;
+
+  const fPathTop = `
+    m ${87 + fPathDeltas.top} 0
+    v 66
+    l 48 27
+    v -93 
+    z
+    `;
+
+  const fPathMid = `
+    m ${87 + fPathDeltas.mid} 66
+    v 40
+    l 44 24.75
+    v -40
+    z
+    `;
+  // 48/27 = 44/24.75; ratio had to be corrected from original SVG
+
+  useEffect(() => {
+    setTimeout(() => {
+      setFPathDeltas({ top: 10, mid: -10 });
+    }, 500);
+    // setTimeout(() => {
+    //   setFPathDeltas({ top: 10, mid: -10 });
+    // }, 1000);
+  }, []);
+
+  return (
+    <div className="transition ease-in duration-300">
+      <svg
+        width="145mm"
+        height="168mm"
+        version="1.1"
+        viewBox="0 0 145 168"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="#1C292C"
+      >
+        <path d={iPath} />
+        <path
+          d={fPathTop}
+          style={{ transition: "1200ms cubic-bezier(.81,.29,.06,.94)" }}
+        />
+        <path
+          d={fPathMid}
+          style={{ transition: "1200ms cubic-bezier(.81,.29,.06,.94)" }}
+        />
+      </svg>
+    </div>
   );
 };
 
