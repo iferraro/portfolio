@@ -1,4 +1,4 @@
-import {x} from "../constant";
+import { x } from "../constant";
 
 interface Project {
   // iconLink: string;
@@ -65,70 +65,54 @@ const customColorChart: Project = new CompletedProject(
   "https://github.com/iferraro/custom-color-chart"
 );
 
-const generalAssemblyProjects = [
+const completedProjects = [
   theMernBible,
   bightOfBytes,
   blogOfTheBeetle,
   mancala,
+  customColorChart,
 ];
 
-const personalProjects = [customColorChart];
+const makeItems = (
+  arr: Array<{
+    title: string;
+    description: string;
+    stack: string[];
+    gitHubLink: string;
+  }>
+) => {
+  return arr.map((item, i) => (
+    <div key={i}>
+      <h1 className="text-xl font-bold">{item.title}</h1>
+      <h2>{item.description} using:</h2>
+      <ul>
+        {item.stack.map((tech: string, j: number) => (
+          <li key={j}>{tech}</li>
+        ))}
+      </ul>
+      <p>
+        <a href={item.gitHubLink} className="text-blue-500">
+          GitHub link
+        </a>
+      </p>
+    </div>
+  ));
+};
 
-const generalAssemblyProjectItems = generalAssemblyProjects.map((item, i) => (
-  <div key={i}>
-    <h1 className="text-xl font-bold">{item.title}</h1>
-    <h2>{item.description} using:</h2>
-    <ul>
-      {item.stack.map((tech, j) => (
-        <li key={j}>{tech}</li>
-      ))}
-    </ul>
-    <p>
-      <a href={item.gitHubLink} className="text-blue-500">
-        GitHub link
-      </a>
-    </p>
-  </div>
-));
-
-const personalProjectItems = personalProjects.map((item, i) => (
-  <div key={i}>
-    <h1 className="text-xl font-bold">{item.title}</h1>
-    <h2>{item.description} using:</h2>
-    <ul>
-      {item.stack.map((tech, j) => (
-        <li key={j}>{tech}</li>
-      ))}
-    </ul>
-    <p>
-      <a href={item.gitHubLink} className="text-blue-500">
-        GitHub link
-      </a>
-    </p>
-  </div>
-));
-
-// const personalProjectItems = personalProjects.map(item)
+const projectItems = makeItems(completedProjects);
 
 const Projects = () => {
-  const handleScroll = () => {
-    console.log(window.scrollY);
-  };
   return (
-    <div onScrollCapture={handleScroll}>
+    <div>
+      <br />
       <br />
       <h1 className="text-center text-4xl text-theme-dark font-bold">
         Projects
       </h1>
       <br />
-      <div className="flex flex-wrap justify-start bg-blue-200">
-        <div>
-          <h1 className="text-2xl font-bold">General Assembly</h1>
-          {generalAssemblyProjectItems}
-        </div>
-        <div>
-          <h1 className="text-2xl font-bold">Personal</h1>
-          {personalProjectItems}
+      <div className="flex flex-wrap justify-center">
+        <div style={{ width: x }} className="mx-6">
+          <ul className="list-disc">{projectItems}</ul>
         </div>
       </div>
     </div>

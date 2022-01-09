@@ -1,27 +1,26 @@
 import { useState, useEffect } from "react";
-import { Transition } from "@headlessui/react";
 import { signatureCubicBezier } from "./features/constant";
 
 const IsaacLogo = () => {
   const [fPathDeltas, setFPathDeltas] = useState({ top: 0, mid: 0 });
   const iPath = `
     m 0 0 
-    v 9.9
+    v 10
     l 20 11
     v 126
     l -20 11
-    v 9.9 
-    h 87 
-    v -9.9 
+    v 10 
+    h 88 
+    v -10 
     l -20 -11
     v -126 
     l 20 -11
-    v -9.9 
+    v -10
     z
     `;
 
   const fPathTop = `
-    m ${87 + fPathDeltas.top} 0
+    m ${20 + fPathDeltas.top} 0
     v 66
     l 48 27
     v -93 
@@ -29,7 +28,7 @@ const IsaacLogo = () => {
     `;
 
   const fPathMid = `
-    m ${87 + fPathDeltas.mid} 66
+    m ${24 + fPathDeltas.mid} 66
     v 40
     l 44 24.75
     v -40
@@ -39,7 +38,7 @@ const IsaacLogo = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      setFPathDeltas({ top: 10, mid: -10 });
+      setFPathDeltas({ top: 77, mid: 53 });
     }, 500);
     // setTimeout(() => {
     //   setFPathDeltas({ top: 10, mid: -10 });

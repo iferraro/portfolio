@@ -80,18 +80,13 @@ const Northwest = () => {
   return (
     <div className="flex flex-col justify-center">
       <br />
-      <div>
-        <h1 className="text-center text-2xl font-bold">
-          Where does Isaac call home?
-          <br />
-          <br />
-          <button
-            onClick={handleClick}
-            className="p-2 w-64 font-bold text-theme-light bg-theme-dark border-4 border-theme-dark rounded-full hover:bg-theme-light hover:text-theme-dark transition in-expo duration-150"
-          >
-            Click to {!revealed ? "find out" : "hide"}
-          </button>
-        </h1>
+      <div className="text-center">
+        <button
+          onClick={handleClick}
+          className="p-2 w-128 text-2xl font-bold text-theme-light bg-theme-dark border-4 border-theme-dark rounded-full hover:bg-theme-light hover:text-theme-dark transition in-expo duration-150"
+        >
+          {!revealed ? "Where does Isaac call home?" : "The Pacific Northwest!"}
+        </button>
       </div>
       <br />
       <div>
@@ -114,15 +109,6 @@ const Northwest = () => {
           />
         </svg>
       </div>
-      <h1
-        className="tracking-wide text-center text-4xl text-theme-dark font-bold"
-        style={{
-          transition: signatureCubicBezier,
-          transitionDuration: "800ms",
-        }}
-      >
-        {!revealed ? "It's..." : "The Pacific Northwest!"}
-      </h1>
       {/* putting graph inside of sub-component will cause graph to only stay
       inside the sub-component, even if sticky */}
     </div>
