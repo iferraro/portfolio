@@ -1,5 +1,5 @@
 import Northwest from "../Northwest/Northwest";
-import x from "../constant";
+import { x } from "../constant";
 
 const about = {
   education: [
@@ -36,9 +36,7 @@ const About = () => {
     <div>
       <br />
       <br />
-      <h1 className="text-center text-4xl text-theme-dark font-bold">
-        About Me
-      </h1>
+      <h1 className="text-center text-4xl font-bold">About Me</h1>
       <br />
       <div className="flex flex-wrap justify-center">
         <div style={{ width: x }} className="mx-6">

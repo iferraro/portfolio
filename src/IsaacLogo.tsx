@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Transition } from "@headlessui/react";
+import { signatureCubicBezier } from "./features/constant";
 
 const IsaacLogo = () => {
   const [fPathDeltas, setFPathDeltas] = useState({ top: 0, mid: 0 });
@@ -46,7 +47,7 @@ const IsaacLogo = () => {
   }, []);
 
   return (
-    <div className="transition ease-in duration-300">
+    <div>
       <svg
         width="145mm"
         height="168mm"
@@ -58,11 +59,17 @@ const IsaacLogo = () => {
         <path d={iPath} />
         <path
           d={fPathTop}
-          style={{ transition: "1200ms cubic-bezier(.81,.29,.06,.94)" }}
+          style={{
+            transition: signatureCubicBezier,
+            transitionDuration: "1000ms",
+          }}
         />
         <path
           d={fPathMid}
-          style={{ transition: "1200ms cubic-bezier(.81,.29,.06,.94)" }}
+          style={{
+            transition: signatureCubicBezier,
+            transitionDuration: "1000ms",
+          }}
         />
       </svg>
     </div>

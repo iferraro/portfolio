@@ -1,4 +1,4 @@
-import x from "../constant";
+import {x} from "../constant";
 
 interface Project {
   // iconLink: string;
