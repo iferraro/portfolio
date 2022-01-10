@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { signatureCubicBezier } from "./features/constant";
 
 const IsaacLogo = () => {
-  const [fPathDeltas, setFPathDeltas] = useState({ top: 0, mid: 0 });
+  const [fPathPoints, setFPathPoints] = useState({ top: 20, mid: 24 });
   const iPath = `
     m 0 0 
     v 10
@@ -20,7 +20,7 @@ const IsaacLogo = () => {
     `;
 
   const fPathTop = `
-    m ${20 + fPathDeltas.top} 0
+    m ${fPathPoints.top} 0
     v 66
     l 48 27
     v -93 
@@ -28,7 +28,7 @@ const IsaacLogo = () => {
     `;
 
   const fPathMid = `
-    m ${24 + fPathDeltas.mid} 66
+    m ${fPathPoints.mid} 66
     v 40
     l 44 24.75
     v -40
@@ -38,11 +38,8 @@ const IsaacLogo = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      setFPathDeltas({ top: 77, mid: 53 });
+      setFPathPoints({ top: 97, mid: 77 });
     }, 500);
-    // setTimeout(() => {
-    //   setFPathDeltas({ top: 10, mid: -10 });
-    // }, 1000);
   }, []);
 
   return (
