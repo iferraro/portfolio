@@ -15,16 +15,14 @@ const Graph = () => {
   console.log(totalHeight, "<= totalHeight");
   console.log(heightForBar, "<= heightForBar");
   return (
-    <div className="fixed left-4 flex justify-start align-center top-0 left-0 w-screen h-4 bg-theme-light">
+    <div className="fixed flex justify-start align-center top-0 left-0 w-screen h-4 bg-theme-light">
       <div
         className="flex justify-center text-xl font-bold text-theme-light bg-theme-dark"
         style={{
-          width: ratio === 0 ? 0 : ratio * window.innerWidth - 48,
+          width: ratio === 0 ? 0 : ratio * window.innerWidth,
           height: 16,
         }}
-      >
-        {/* {Math.floor(100 * ratio)}% */}
-      </div>
+      />
     </div>
   );
 };
