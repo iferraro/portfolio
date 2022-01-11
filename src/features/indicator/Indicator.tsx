@@ -16,17 +16,25 @@ const Graph = () => {
   console.log(window.innerWidth, "<= window.innerWidth");
   const totalHeight = document.documentElement.getBoundingClientRect().height;
   const heightForBar = totalHeight - window.innerHeight;
+  const ratio = t / heightForBar;
   console.log(totalHeight, "<= totalHeight");
   console.log(heightForBar, "<= heightForBar");
   return (
-    <div className="fixed top-0">
-      <p className="w-full text-xl text-black font-bold bg-green-400">
-        {/* t = {t} */}
-        <br />
-        {Math.floor(100 * (t / heightForBar))}%
-      </p>
-      {/* putting graph inside of sub-component will cause graph to only stay
+    <div className="fixed">
+      <div
+        className="fixed flex justify-center align-center p-2 top-4 border-4 border-theme-dark rounded-full text-2xl text-theme-dark font-bold bg-theme-light"
+        style={{
+          height: 56,
+          width: ratio === 0 ? 56 : ratio * window.innerWidth - 48,
+        }}
+      >
+        <p>
+          {/* t = {t} */}
+          {Math.floor(100 * ratio)}%
+        </p>
+        {/* putting graph inside of sub-component will cause graph to only stay
       inside the sub-component, even if sticky */}
+      </div>
     </div>
   );
 };
