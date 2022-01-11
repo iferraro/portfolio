@@ -2,10 +2,10 @@ import IsaacLogo from "../../IsaacLogo";
 
 const Header = () => {
   return (
-    <div>
+    <div className="mt-8">
       <div className="flex flex-col justify-center">
         <div className="flex justify-center">
-          <IsaacLogo />
+          <IsaacLogo/>
         </div>
         <div className="flex flex-col justify-center text-center text-theme-dark">
           <h1 className="text-6xl font-bold">Isaac Ferraro</h1>

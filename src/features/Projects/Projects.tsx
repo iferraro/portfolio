@@ -95,6 +95,7 @@ const makeItems = (
           See on GitHub
         </a>
       </p>
+      <br />
     </div>
   ));
 };

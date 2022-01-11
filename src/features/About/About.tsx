@@ -42,14 +42,18 @@ const About = () => {
         <div style={{ width: x }} className="mx-6">
           <h1 className="text-2xl font-bold">Education</h1>
           <ul className="list-disc">{educationItems}</ul>
+          <br />
           <h1 className="text-2xl font-bold">What Motivates Me</h1>
           <ul className="list-disc">{motivationItems}</ul>
+          <br />
         </div>
         <div style={{ width: x }} className="mx-6">
           <h1 className="text-2xl font-bold">Non-Coding Hobbies</h1>
           <ul className="list-disc">{hobbyItems}</ul>
+          <br />
           <h1 className="text-2xl font-bold">Things I've Memorized</h1>
           <ul className="list-disc">{memorizedItems}</ul>
+          <br />
         </div>
       </div>
       <Northwest />

@@ -43,32 +43,30 @@ const IsaacLogo = () => {
   }, []);
 
   return (
-    <div>
-      <svg
-        width="145mm"
-        height="168mm"
-        version="1.1"
-        viewBox="0 0 145 168"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="#1C292C"
-      >
-        <path d={iPath} />
-        <path
-          d={fPathTop}
-          style={{
-            transition: signatureCubicBezier,
-            transitionDuration: "1000ms",
-          }}
-        />
-        <path
-          d={fPathMid}
-          style={{
-            transition: signatureCubicBezier,
-            transitionDuration: "1000ms",
-          }}
-        />
-      </svg>
-    </div>
+    // <div>
+    <svg
+      width={180}
+      viewBox="0 0 145 168"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="#1C292C"
+    >
+      <path d={iPath} />
+      <path
+        d={fPathTop}
+        style={{
+          transition: signatureCubicBezier,
+          transitionDuration: "1000ms",
+        }}
+      />
+      <path
+        d={fPathMid}
+        style={{
+          transition: signatureCubicBezier,
+          transitionDuration: "1000ms",
+        }}
+      />
+    </svg>
+    // </div>
   );
 };
 
