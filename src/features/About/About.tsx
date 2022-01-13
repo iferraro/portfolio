@@ -1,3 +1,4 @@
+import React from "react";
 import Northwest from "../Northwest/Northwest";
 import { x } from "../constant";
 

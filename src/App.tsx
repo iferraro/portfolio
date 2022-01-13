@@ -1,3 +1,4 @@
+import React from "react";
 import Graph from "./features/indicator/Indicator";
 import Header from "./features/Header/Header";
 import About from "./features/About/About";

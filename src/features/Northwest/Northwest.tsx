@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { x, signatureCubicBezier } from "../constant";
 
 const letterWidth = 100; // desired width of 'N' and 'W'
