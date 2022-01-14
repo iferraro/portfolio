@@ -6,6 +6,7 @@ interface Project {
   title: string;
   description: string;
   stack: string[];
+  siteLink: string;
   gitHubLink: string;
 }
 
@@ -14,6 +15,7 @@ class CompletedProject {
   title: string;
   description: string;
   stack: string[];
+  siteLink: string;
   gitHubLink: string;
 
   constructor(
@@ -21,12 +23,14 @@ class CompletedProject {
     title: string,
     description: string,
     stack: string[],
+    siteLink: string,
     gitHubLink: string
   ) {
     // this.iconLink = iconLink;
     this.title = title;
     this.description = description;
     this.stack = stack;
+    this.siteLink = siteLink;
     this.gitHubLink = gitHubLink;
   }
 }
@@ -35,6 +39,7 @@ const mancala: Project = new CompletedProject(
   "Mancala",
   "A recreation of the classic board game Mancala",
   ["Vanilla JavaScript", "HTML", "CSS"],
+  "https://iferraro.github.io/mancala/",
   "https://github.com/iferraro/mancala"
 );
 
@@ -42,6 +47,7 @@ const blogOfTheBeetle: Project = new CompletedProject(
   "Blog of the Beetle",
   "A beetle image upload site",
   ["Node", "Express", "MongoDB", "Passport", "Google API"],
+  "https://blog-of-the-beetle.herokuapp.com/home",
   "https://github.com/iferraro/blog-of-the-beetle"
 );
 
@@ -49,6 +55,7 @@ const bightOfBytes: Project = new CompletedProject(
   "Bight of Bytes",
   "A smartphone info tool",
   ["Python", "Django", "PostgreSQL"],
+  "https://bight-of-bytes.herokuapp.com/",
   "https://github.com/iferraro/bight-of-bytes"
 );
 
@@ -56,6 +63,7 @@ const theMernBible: Project = new CompletedProject(
   "The MERN Bible",
   "A King James Version Bible reference",
   ["MongoDB", "Express", "React", "Node", "Tailwind CSS", "Headless UI"],
+  "https://mern-bible.herokuapp.com/",
   "https://github.com/iferraro/mern-bible"
 );
 
@@ -63,6 +71,7 @@ const customColorChart: Project = new CompletedProject(
   "Custom Color Chart",
   "My personal favorite colors, named by me",
   ["Vanilla JavaScript", "jQuery", "HTML", "CSS"],
+  "https://iferraro.github.io/custom-color-chart/",
   "https://github.com/iferraro/custom-color-chart"
 );
 
@@ -79,6 +88,7 @@ const makeItems = (
     title: string;
     description: string;
     stack: string[];
+    siteLink: string;
     gitHubLink: string;
   }>
 ) => {
@@ -92,8 +102,10 @@ const makeItems = (
         ))}
       </ul>
       <p>
-        <a href={item.gitHubLink} className="text-blue-500">
-          See on GitHub
+        <a href={item.siteLink} className="text-blue-500 font-bold">Go to Site</a>
+        <br />
+        <a href={item.gitHubLink} className="text-blue-500 font-bold">
+          Go to GitHub Repo
         </a>
       </p>
       <br />
