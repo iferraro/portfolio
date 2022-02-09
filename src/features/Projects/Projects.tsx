@@ -102,7 +102,9 @@ const makeItems = (
         ))}
       </ul>
       <p>
-        <a href={item.siteLink} className="text-blue-500 font-bold">Go to Site</a>
+        <a href={item.siteLink} className="text-blue-500 font-bold">
+          Go to Site
+        </a>
         <br />
         <a href={item.gitHubLink} className="text-blue-500 font-bold">
           Go to GitHub Repo
@@ -124,7 +126,9 @@ const Projects = () => {
         Projects
       </h1>
       <br />
-      <div className="flex flex-wrap justify-center">{projectItems}</div>
+      <div className="flex flex-wrap justify-center mx-auto" style={{ maxWidth: 2 * x + 96}}>
+        {projectItems}
+      </div>
     </div>
   );
 };

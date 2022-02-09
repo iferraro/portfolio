@@ -5,7 +5,7 @@ import { x } from "../constant";
 const about = {
   education: [
     "General Assembly (2021), Certificate, Software Engineering Immersive",
-    "Olympic College (2021), A.S.,Electrical & Computer Engineering",
+    "Olympic College (2021), A.S., Electrical & Computer Engineering",
   ],
   motivations: [
     "Successes, both large and small",
@@ -15,7 +15,7 @@ const about = {
   hobbies: [
     "Creating vector graphics on Inkscape (such as my logo above)",
     "Running (usually 3-4 miles)",
-    "Solving calculus problems (only when bored)",
+    "Solving calculus problems (only when bored, I promise)",
   ],
   memorized: ["U.S. presidents", "U.S. state capitals", "Greek alphabet"],
 };
