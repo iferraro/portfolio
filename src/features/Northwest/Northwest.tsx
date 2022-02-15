@@ -79,17 +79,14 @@ const Northwest = () => {
 
   return (
     <div className="flex flex-col justify-center">
-      <br />
-      <br />
       <div className="text-center">
         <button
           onClick={handleClick}
-          className="p-2 w-128 text-2xl font-bold text-theme-light bg-theme-dark border-4 border-theme-dark rounded-full hover:bg-theme-light hover:text-theme-dark transition in-expo duration-150"
+          className="p-2 w-128 my-6 text-2xl font-bold text-theme-light bg-theme-dark border-4 border-theme-dark rounded-full hover:bg-theme-light hover:text-theme-dark transition in-expo duration-150"
         >
           {!revealed ? "Where do I call home?" : "The Pacific Northwest!"}
         </button>
       </div>
-      <br />
       <div className="flex justify-center">
         <svg viewBox={viewBox} width={x}>
           <path
