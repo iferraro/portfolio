@@ -5,7 +5,7 @@ const Footer = () => {
     <div className="text-center">
       <br />
       <p className="font-bold">
-        This site was made using TypeScript, React, Redux, and Tailwindcss; deployed via Netlify
+        This site was made using TypeScript, React, Redux, and Tailwind CSS; deployed via Netlify
       </p>
       <br />
     </div>

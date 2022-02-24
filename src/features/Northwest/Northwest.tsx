@@ -107,8 +107,6 @@ const Northwest = () => {
           />
         </svg>
       </div>
-      {/* putting graph inside of sub-component will cause graph to only stay
-      inside the sub-component, even if sticky */}
     </div>
   );
 };
