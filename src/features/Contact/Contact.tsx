@@ -7,8 +7,10 @@ const Contact = () => {
       <h1 className="text-4xl font-bold">Contact</h1>
       <br />
       <p>
-        ieferraro@outlook.com |{" "}
-        <a href="https://www.linkedin.com/in/isaac-ferraro/">LinkedIn</a> |{" "}
+        <a href="mailto:ieferraro@outlook.com">
+          ieferraro@outlook.com
+        </a>{" "}
+        | <a href="https://www.linkedin.com/in/isaac-ferraro/">LinkedIn</a> |{" "}
         <a href="https://github.com/iferraro">GitHub</a>
       </p>
     </div>

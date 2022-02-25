@@ -30,7 +30,7 @@ const skills = [
   },
   {
     label: "Currently Learning",
-    list: ["C#", "ASP.NET Core", "Azure App Service", "TypeScript"],
+    list: ["TypeScript", "ASP.NET Core", "Azure App Service", "Figma"],
   },
 ];
 
@@ -39,7 +39,6 @@ const makeSkillList = (arr: string[]) => {
 };
 
 const makeSkillset = (skillset: Array<{ label: string; list: string[] }>) => {
-  console.log(skillset);
   return skillset.map((skill, i) => (
     <div key={i}>
       <strong className="text-xl">{skill.label}</strong>
@@ -60,9 +59,9 @@ const About = () => {
       <div className="h-6"></div>
       <h1 className="text-center text-4xl font-bold">About Me</h1>
       <p>
-        I am a graduate of the General Assembly bootcamp (Certificate, Software Engineering
-        Immersive [2021]), as well as Olympic College in Bremerton, WA (A.S.,
-        Electrical & Computer Engineering [2021].)
+        I am a graduate of the General Assembly bootcamp (Certificate, Software
+        Engineering Immersive [2021]), as well as Olympic College in Bremerton,
+        WA (A.S., Electrical & Computer Engineering [2021].)
         <br />
         A few non-coding hobbies of mine include creating vector graphics on
         Inkscape, such as my logo above (and hidden icon below); running
@@ -70,7 +69,11 @@ const About = () => {
         (only when bored, I promise.)
         <br />
         Some things I have memorized are The U.S. presidents in order, the U.S.
-        State capitals, and the Greek alphabet.
+        state capitals, and the Greek alphabet.
+        <br />
+        Primarily, I desire to create and and improve upon the front-end functionality of
+        web applicatons. In addition, I would like to use my combined knowledge
+        of programming and SVGs to create exceptional UIs.
       </p>
       <div className="h-6"></div>
       <Northwest />

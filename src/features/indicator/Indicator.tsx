@@ -9,12 +9,9 @@ const Graph = () => {
     dispatch(redefine(window.scrollY));
   };
   window.addEventListener("scroll", handleScroll);
-  console.log(window.innerWidth, "<= window.innerWidth");
   const totalHeight = document.documentElement.getBoundingClientRect().height;
   const heightForBar = totalHeight - window.innerHeight;
   const ratio = t / heightForBar;
-  console.log(totalHeight, "<= totalHeight");
-  console.log(heightForBar, "<= heightForBar");
   return (
     <div className="fixed flex justify-start align-center top-0 left-0 w-screen h-4 bg-theme-light">
       <div
