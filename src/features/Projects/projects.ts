@@ -54,7 +54,7 @@ const theMernBible: Project = new Project(
   "The MERN Bible",
   "A King James Version Bible reference",
   ["MongoDB", "Express", "React", "Node", "Tailwind CSS", "Headless UI"],
-  "https://i.imgur.com/TLXCAtY.png",
+  "https://i.imgur.com/7YkID3P.png",
   "https://mern-bible.herokuapp.com/",
   "https://github.com/iferraro/mern-bible"
 );
