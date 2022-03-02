@@ -24,13 +24,14 @@ const skills = [
       "Passport.js",
       "Tailwind CSS",
       "Headless UI",
+      "Figma",
       "Inkscape",
       "Visual Studio Code",
     ],
   },
   {
     label: "Currently Learning",
-    list: ["TypeScript", "ASP.NET Core", "Azure App Service", "Figma"],
+    list: ["TypeScript", "C#", "ASP.NET Core", "Azure App Service"],
   },
 ];
 
