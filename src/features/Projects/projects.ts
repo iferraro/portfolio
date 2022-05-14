@@ -59,13 +59,13 @@ const theMernBible: Project = new Project(
   "https://github.com/iferraro/mern-bible"
 );
 
-const customColorChart: Project = new Project(
-  "Custom Color Chart",
+const isaacsCustomColors: Project = new Project(
+  "Isaac's Custom Colors",
   "My personal favorite colors, named by me",
-  ["Vanilla JavaScript", "jQuery", "HTML", "CSS"],
-  "https://i.imgur.com/SUK7MkJ.png",
-  "https://iferraro.github.io/custom-color-chart/",
-  "https://github.com/iferraro/custom-color-chart"
+  ["TypeScript", "React", "Microsoft Azure", "Tailwind CSS", "Headless UI"],
+  "https://i.imgur.com/V0oSLN9.png",
+  "https://www.isaacscolors.io/",
+  "https://github.com/iferraro/isaacs-colors"
 );
 
 const projects = [
@@ -73,7 +73,7 @@ const projects = [
   bightOfBytes,
   blogOfTheBeetle,
   mancala,
-  customColorChart,
+  isaacsCustomColors,
 ];
 
 export { projects };
