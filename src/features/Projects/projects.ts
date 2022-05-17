@@ -62,8 +62,8 @@ const theMernBible: Project = new Project(
 const isaacsCustomColors: Project = new Project(
   "Isaac's Custom Colors",
   "My personal favorite colors, named by me",
-  ["TypeScript", "React", "Microsoft Azure", "Tailwind CSS", "Headless UI"],
-  "https://i.imgur.com/V0oSLN9.png",
+  ["TypeScript", "React", "Microsoft Azure", "Tailwind CSS"],
+  "https://i.imgur.com/yWOJIa6.png",
   "https://www.isaacscolors.io/",
   "https://github.com/iferraro/isaacs-colors"
 );
