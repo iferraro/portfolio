@@ -42,7 +42,7 @@ const makeSkillList = (arr: string[]) => {
 const makeSkillset = (skillset: Array<{ label: string; list: string[] }>) => {
   return skillset.map((skill, i) => (
     <div key={i}>
-      <strong className="text-xl">{skill.label}</strong>
+      <strong className="text-xl font-black">{skill.label}</strong>
       <br />
       {makeSkillList(skill.list)}
       <br />
@@ -54,11 +54,11 @@ const About = () => {
   return (
     <div className="mx-auto my-6" style={{ maxWidth: 2 * x + 96 }}>
       <div className="text-center">
-        <h1 className="text-4xl font-bold">Skills</h1>
+        <h1 className="text-4xl font-black">Skills</h1>
         {makeSkillset(skills)}
       </div>
       <div className="h-6"></div>
-      <h1 className="text-center text-4xl font-bold">About Me</h1>
+      <h1 className="text-center text-4xl font-black">About Me</h1>
       <p>
         I am a graduate of the General Assembly bootcamp (Certificate, Software
         Engineering Immersive [2021]), as well as Olympic College in Bremerton,

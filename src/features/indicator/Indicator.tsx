@@ -2,7 +2,7 @@ import React from "react";
 import { useAppSelector, useAppDispatch } from "../../app/hooks";
 import { redefine, selectT } from "./scrollSlice";
 
-const Graph = () => {
+const Indicator = () => {
   const t = useAppSelector(selectT);
   const dispatch = useAppDispatch();
   const handleScroll = () => {
@@ -25,4 +25,4 @@ const Graph = () => {
   );
 };
 
-export default Graph;
+export default Indicator;

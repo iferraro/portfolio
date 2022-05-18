@@ -15,21 +15,25 @@ const makeItems = (
   return arr.map((item, i) => (
     <div key={i} style={{ width: x }} className="m-6">
       <img src={item.imageLink} alt={item.title} />
-      <h1 className="text-2xl font-bold">{item.title}</h1>
+      <h1 className="text-2xl font-black">{item.title}</h1>
       <h2>{item.description} using:</h2>
-      <ul className="list-disc">
+      <ul className="list-disc mb-2">
         {item.stack.map((tech: string, j: number) => (
           <li key={j}>{tech}</li>
         ))}
       </ul>
       <p>
-        <a href={item.siteLink} className="text-blue-500 font-bold">
-          Go to Site
-        </a>
+        <button className="px-2 mb-2 text-lg font-semibold text-theme-light bg-blue-500 border-4 border-blue-500 rounded-full hover:bg-theme-light hover:text-blue-500 in-expo duration-150">
+          <a href={item.siteLink}>Go to Site</a>
+        </button>
         <br />
-        <a href={item.gitHubLink} className="text-blue-500 font-bold">
-          Go to GitHub Repo
-        </a>
+        <button className="px-2 text-lg font-semibold text-theme-light bg-blue-500 border-4 border-blue-500 rounded-full hover:bg-theme-light hover:text-blue-500 in-expo duration-150">
+          <a
+            href={item.gitHubLink}
+          >
+            Go to GitHub Repo
+          </a>
+        </button>
       </p>
       <br />
     </div>
@@ -43,7 +47,7 @@ const Projects = () => {
     <div>
       <br />
       <br />
-      <h1 className="text-center text-4xl text-theme-dark font-bold">
+      <h1 className="text-center text-4xl text-theme-dark font-black">
         Projects
       </h1>
       <br />

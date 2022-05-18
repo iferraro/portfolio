@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <div className="text-center">
       <br />
-      <h1 className="text-4xl font-bold">Contact</h1>
+      <h1 className="text-4xl font-black">Contact</h1>
       <br />
       <p>
         <a href="mailto:ieferraro@outlook.com">

@@ -9,8 +9,8 @@ const Header = () => {
           <IsaacLogo/>
         </div>
         <div className="flex flex-col justify-center text-center text-theme-dark">
-          <h1 className="text-6xl font-bold">Isaac Ferraro</h1>
-          <h2 className="text-2xl font-bold">Web Developer</h2>
+          <h1 className="text-6xl font-black">Isaac Ferraro</h1>
+          <h2 className="text-2xl font-black">Web Developer</h2>
         </div>
       </div>
     </div>
