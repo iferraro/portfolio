@@ -63,7 +63,7 @@ const isaacsCustomColors: Project = new Project(
   "Isaac's Custom Colors",
   "My personal favorite colors, named by me",
   ["TypeScript", "React", "Microsoft Azure", "Tailwind CSS"],
-  "https://i.imgur.com/yWOJIa6.png",
+  "https://i.imgur.com/LURMAA2.png",
   "https://www.isaacscolors.io/",
   "https://github.com/iferraro/isaacs-colors"
 );
