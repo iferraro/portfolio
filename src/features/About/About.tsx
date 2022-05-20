@@ -8,7 +8,7 @@ const skills = [
     list: ["JavaScript (ES6 and newer)", "Python 3", "HTML5", "CSS3"],
   },
   {
-    label: "Frameworks",
+    label: "Frameworks/Libraries",
     list: ["React.js", "Node.js", "Express.js", "Django"],
   },
   {
