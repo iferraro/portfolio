@@ -24,13 +24,13 @@ const makeItems = (
       </ul>
       <p>
         <button className="px-2 mb-2 text-lg font-semibold text-theme-light bg-blue-500 border-4 border-blue-500 rounded-full hover:bg-theme-light hover:text-blue-500 in-expo duration-150">
-          <a href={item.siteLink}>Go to Site</a>
+          <a href={item.siteLink} target="_blank">
+            Go to Site
+          </a>
         </button>
         <br />
         <button className="px-2 text-lg font-semibold text-theme-light bg-blue-500 border-4 border-blue-500 rounded-full hover:bg-theme-light hover:text-blue-500 in-expo duration-150">
-          <a
-            href={item.gitHubLink}
-          >
+          <a href={item.gitHubLink} target="_blank">
             Go to GitHub Repo
           </a>
         </button>
