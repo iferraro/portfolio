@@ -5,7 +5,7 @@ import { x } from "../constant";
 const skills = [
   {
     label: "Languages",
-    list: ["JavaScript (ES6 and newer)", "Python 3", "HTML5", "CSS3"],
+    list: ["JavaScript (ES6 and newer)", "TypeScript", "Python 3", "HTML5", "CSS3"],
   },
   {
     label: "Frameworks/Libraries",
@@ -31,7 +31,7 @@ const skills = [
   },
   {
     label: "Currently Learning",
-    list: ["TypeScript", "C#", "ASP.NET Core", "Azure App Service"],
+    list: ["C#", "ASP.NET Core", "Azure App Service"],
   },
 ];
 
