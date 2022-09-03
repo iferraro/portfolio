@@ -33,6 +33,7 @@ const skills: Skill[] = [
       "Mongoose",
       "GraphQL",
       "Apollo Client",
+      "MaterialUI",
       "Tailwind CSS",
       "Headless UI",
       "Figma",
