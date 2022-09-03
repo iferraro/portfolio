@@ -27,14 +27,14 @@ const Northwest = () => {
   });
 
   const handleClick = () => {
-    !revealed
+    revealed
       ? setDeltas({
-          n: 0.5 * (letterWidth - beta),
-          w: 0.25 * letterWidth,
-        })
-      : setDeltas({
           n: 0,
           w: 0,
+        })
+      : setDeltas({
+          n: 0.5 * (letterWidth - beta),
+          w: 0.25 * letterWidth,
         });
     setRevealed(!revealed);
   };

@@ -68,7 +68,7 @@ const isaacsCustomColors: Project = new Project(
   "https://github.com/iferraro/isaacs-colors"
 );
 
-const projects = [
+const projectList = [
   theMernBible,
   bightOfBytes,
   blogOfTheBeetle,
@@ -76,4 +76,4 @@ const projects = [
   isaacsCustomColors,
 ];
 
-export { projects };
+export { projectList };

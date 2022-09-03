@@ -2,7 +2,7 @@ import React from "react";
 import Indicator from "./features/indicator/Indicator";
 import Header from "./features/Header/Header";
 import About from "./features/About/About";
-import Projects from "./features/Projects/Projects";
+import ProjectGallery from "./features/ProjectGallery/ProjectGallery";
 import Contact from "./features/Contact/Contact";
 const App = () => {
   return (
@@ -10,7 +10,7 @@ const App = () => {
       <Header />
       <Indicator />
       <About />
-      <Projects />
+      <ProjectGallery />
       <Contact />
     </div>
   );

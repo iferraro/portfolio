@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../../app/store";
 
-export interface ScrollState {
-  t: number; // AKA y coordinate of NW SVG; called t for use in sine equation
+interface ScrollState {
+  t: number;
 }
 
 const initialState: ScrollState = {
