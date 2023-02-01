@@ -2,10 +2,8 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="mb-8 text-center ">
-      <br />
-      <h1 className="text-4xl font-black">Contact</h1>
-      <br />
+    <section className="pt-4 pb-8 text-center ">
+      <h1 className="mb-4 text-4xl font-bold">Contact</h1>
       <p>
         <a href="mailto:ieferraro@outlook.com">ieferraro@outlook.com</a> |{" "}
         <a href="https://www.linkedin.com/in/isaac-ferraro/" target="_blank">
@@ -16,7 +14,7 @@ const Contact = () => {
           GitHub
         </a>
       </p>
-    </div>
+    </section>
   );
 };
 

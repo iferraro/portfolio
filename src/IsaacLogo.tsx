@@ -43,7 +43,6 @@ const IsaacLogo = () => {
   }, []);
 
   return (
-    // <div>
     <svg
       width={180}
       viewBox="0 0 145 168"
@@ -66,7 +65,6 @@ const IsaacLogo = () => {
         }}
       />
     </svg>
-    // </div>
   );
 };
 

@@ -3,9 +3,9 @@ import { x } from "../constant";
 import { projectList } from "./projectList";
 
 const projectItems = projectList.map((item, i) => (
-  <div key={i} style={{ width: x }} className="m-6">
-    <img src={item.imageUrl} alt={item.title} />
-    <h1 className="text-2xl font-black">{item.title}</h1>
+  <div key={i} style={{ width: x }} className="p-4">
+    <img src={item.imageUrl} alt={item.title} className="mb-4"/>
+    <h1 className="text-2xl font-bold">{item.title}</h1>
     <h2>{item.description} using:</h2>
     <ul className="list-disc mb-2">
       {item.stack.map((tech: string, j: number) => (
@@ -31,20 +31,17 @@ const projectItems = projectList.map((item, i) => (
 
 const ProjectGallery = () => {
   return (
-    <div>
-      <br />
-      <br />
-      <h1 className="text-center text-4xl text-theme-dark font-black">
+    <section className="py-4">
+      <h1 className="text-center text-4xl text-theme-dark font-bold">
         Projects
       </h1>
-      <br />
       <div
         className="flex flex-wrap justify-center mx-auto"
         style={{ maxWidth: 2 * x + 96 }}
       >
         {projectItems}
       </div>
-    </div>
+    </section>
   );
 };
 
